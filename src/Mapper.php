@@ -26,9 +26,10 @@ class Mapper
      *
      * @param  array  $data
      * @param  string $className The class name
+     * @param  bool   $ignore    Ignore fail to mapping key
      * @return Object
      */
-    public static function hydrate(array $data, $className)
+    public static function hydrate(array $data, $className, $ignore = false)
     {
         $class = new ReflectionClass($className);
 
@@ -44,6 +45,10 @@ class Mapper
             } else if (is_numeric($key) && $class->hasMethod('add')) {
                 $method = 'add';
             } else {
+                if ($ignore) {
+                    continue;
+                }
+
                 if (is_numeric($key)) {
                     throw new RuntimeException(sprintf(
                         'The class %s does not have add() method.',

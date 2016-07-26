@@ -68,6 +68,7 @@ class MapperTest extends PHPUnit_Framework_TestCase
             'id' => 1,
             'name' => 'Axel',
             'create_at' => $createAt,
+            'key_not_found' => 'bar',
             'articles' => [
                 [
                     'title' => 'test',
@@ -90,7 +91,7 @@ class MapperTest extends PHPUnit_Framework_TestCase
                     'tag' => 'foo'
                 ]
             ]
-        ], User::class);
+        ], User::class, true);
 
         $this->assertInstanceOf('Kokoroe\Component\Mapper\Test\User', $user);
 
