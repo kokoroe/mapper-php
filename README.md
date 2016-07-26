@@ -1,7 +1,7 @@
 # Mapper PHP
 
 [![Build Status](https://img.shields.io/travis/kokoroe/mapper-php/master.svg)](https://travis-ci.org/kokoroe/mapper-php)
-[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/8d361bb3-7b77-4888-87f4-e72f29dd9d18.svg)](https://insight.sensiolabs.com/projects/8d361bb3-7b77-4888-87f4-e72f29dd9d18)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/b8262202-4509-47e2-9d3c-3190b30d8527.svg)](https://insight.sensiolabs.com/projects/b8262202-4509-47e2-9d3c-3190b30d8527)
 [![Coveralls](https://img.shields.io/coveralls/kokoroe/kokoroe-sdk-php.svg)](https://coveralls.io/github/kokoroe/mapper-php)
 [![HHVM](https://img.shields.io/hhvm/kokoroe/mapper-php.svg)](https://travis-ci.org/kokoroe/mapper-php)
 [![Packagist](https://img.shields.io/packagist/v/kokoroe/mapper-php.svg)](https://packagist.org/packages/kokoroe/mapper-php)
