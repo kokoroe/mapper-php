@@ -4,7 +4,7 @@
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/b8262202-4509-47e2-9d3c-3190b30d8527.svg)](https://insight.sensiolabs.com/projects/b8262202-4509-47e2-9d3c-3190b30d8527)
 [![Coveralls](https://img.shields.io/coveralls/kokoroe/kokoroe-sdk-php.svg)](https://coveralls.io/github/kokoroe/mapper-php)
 [![HHVM](https://img.shields.io/hhvm/kokoroe/mapper-php.svg)](https://travis-ci.org/kokoroe/mapper-php)
-[![Packagist](https://img.shields.io/packagist/v/kokoroe/mapper-php.svg)](https://packagist.org/packages/kokoroe/mapper-php)
+[![Packagist](https://img.shields.io/packagist/v/kokoroe/mapper.svg)](https://packagist.org/packages/kokoroe/mapper)
 
 ## Install
 
