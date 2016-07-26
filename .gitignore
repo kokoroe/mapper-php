@@ -1,0 +1,5 @@
+vendor/
+build/
+demo/
+composer.lock
+composer.phar

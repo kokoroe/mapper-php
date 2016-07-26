@@ -1,0 +1,23 @@
+{
+    "name": "kokoroe/mapper",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^5.4",
+        "satooshi/php-coveralls": "^1.0",
+        "leaphub/phpcs-symfony2-standard": "2.0.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Axel Etcheverry",
+            "email": "axel.etcheverry@kokoroe.fr"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Kokoroe\\Component\\Mapper\\": "src/",
+            "Kokoroe\\Component\\Mapper\\Test\\": "tests/"
+        }
+    }
+}
