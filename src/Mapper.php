@@ -14,7 +14,6 @@
 namespace Kokoroe\Component\Mapper;
 
 use ReflectionClass;
-use InvalidArgumentException;
 use RuntimeException;
 
 /**
