@@ -13,6 +13,8 @@
  */
 namespace Kokoroe\Component\Mapper\Test;
 
+use DateTime;
+
 class User
 {
     protected $id;
@@ -20,6 +22,8 @@ class User
     protected $name;
 
     protected $articles;
+
+    protected $createAt;
 
     public function setArticles(ArticleCollection $articles)
     {
@@ -49,5 +53,15 @@ class User
     public function getName()
     {
         return $this->name;
+    }
+
+    public function setCreateAt(DateTime $date)
+    {
+        $this->createAt = $date;
+    }
+
+    public function getCreateAt()
+    {
+        return $this->createAt;
     }
 }

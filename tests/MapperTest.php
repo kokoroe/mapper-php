@@ -15,6 +15,7 @@ namespace Kokoroe\Component\Mapper\Test;
 
 use Kokoroe\Component\Mapper\Mapper;
 use PHPUnit_Framework_TestCase;
+use DateTime;
 
 class MapperTest extends PHPUnit_Framework_TestCase
 {
@@ -49,7 +50,7 @@ class MapperTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException RuntimeException
-     * @expectedExceptionMessage The method Kokoroe\Component\Mapper\Test\UserBadSetterWithoutParam::setid() does not have a parameter.
+     * @expectedExceptionMessage The method Kokoroe\Component\Mapper\Test\UserBadSetterWithoutParam::setId() does not have a parameter.
      */
     public function testHydrateWithBadSetterWithoutParam()
     {
@@ -61,9 +62,12 @@ class MapperTest extends PHPUnit_Framework_TestCase
 
     public function testHydrate()
     {
+        $createAt = new DateTime('now');
+
         $user = Mapper::hydrate([
             'id' => 1,
             'name' => 'Axel',
+            'create_at' => $createAt,
             'articles' => [
                 [
                     'title' => 'test',
@@ -91,5 +95,7 @@ class MapperTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Kokoroe\Component\Mapper\Test\User', $user);
 
         $this->assertEquals(1, $user->getId());
+        $this->assertInstanceOf('DateTime', $user->getCreateAt());
+        $this->assertEquals($createAt, $user->getCreateAt());
     }
 }

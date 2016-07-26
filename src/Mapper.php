@@ -35,10 +35,12 @@ class Mapper
         $object = $class->newInstance();
 
         foreach ($data as $key => $value) {
-            if ($class->hasMethod('set' . $key)) {
-                $method = 'set' . $key;
-            } else if ($class->hasMethod('add' . $key)) {
-                $method = 'add' . $key;
+            $methodName = str_replace(' ', '', ucwords(str_replace('_', ' ', $key)));
+
+            if ($class->hasMethod('set' . $methodName)) {
+                $method = 'set' . $methodName;
+            } else if ($class->hasMethod('add' . $methodName)) {
+                $method = 'add' . $methodName;
             } else if (is_numeric($key) && $class->hasMethod('add')) {
                 $method = 'add';
             } else {
@@ -52,7 +54,7 @@ class Mapper
                 throw new RuntimeException(sprintf(
                     'The class %s does not have a setter for %s property.',
                     $className,
-                    $key
+                    lcfirst($methodName)
                 ));
             }
 
