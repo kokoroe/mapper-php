@@ -68,6 +68,7 @@ class MapperTest extends PHPUnit_Framework_TestCase
             'id' => 1,
             'name' => 'Axel',
             'create_at' => $createAt,
+            'delete_at' => null,
             'key_not_found' => 'bar',
             'articles' => [
                 [

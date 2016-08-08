@@ -38,6 +38,10 @@ class Mapper
         foreach ($data as $key => $value) {
             $methodName = str_replace(' ', '', ucwords(str_replace('_', ' ', $key)));
 
+            if (is_null($value)) {
+                continue;
+            }
+
             if ($class->hasMethod('set' . $methodName)) {
                 $method = 'set' . $methodName;
             } else if ($class->hasMethod('add' . $methodName)) {

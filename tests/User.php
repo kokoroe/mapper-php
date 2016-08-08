@@ -25,6 +25,8 @@ class User
 
     protected $createAt;
 
+    protected $deleteAt;
+
     public function setArticles(ArticleCollection $articles)
     {
         $this->articles = $articles;
@@ -63,5 +65,15 @@ class User
     public function getCreateAt()
     {
         return $this->createAt;
+    }
+
+    public function setDeleteAt(DateTime $date)
+    {
+        $this->deleteAt = $date;
+    }
+
+    public function getDeleteAt()
+    {
+        return $this->deleteAt;
     }
 }
